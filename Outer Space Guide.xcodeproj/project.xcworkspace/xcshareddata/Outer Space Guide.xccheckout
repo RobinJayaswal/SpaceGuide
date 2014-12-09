@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>24CF18D6-F4F5-4B23-B0DE-769AD6F3857E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Outer Space Guide</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CA5DCEFFA2A0821796F52B13ACF94CA318B9DCC8</key>
+		<string>bitbucket.org:robinjayaswal/space-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Outer Space Guide.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CA5DCEFFA2A0821796F52B13ACF94CA318B9DCC8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>bitbucket.org:robinjayaswal/space-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CA5DCEFFA2A0821796F52B13ACF94CA318B9DCC8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CA5DCEFFA2A0821796F52B13ACF94CA318B9DCC8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Outer%20Space%20Guide</string>
+		</dict>
+	</array>
+</dict>
+</plist>

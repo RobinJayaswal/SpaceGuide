@@ -7,6 +7,7 @@
 //
 
 #import "secondaryViewController.h"
+#import "UIScrollViewViewController.h"
 
 @interface secondaryViewController ()
 
@@ -27,6 +28,18 @@
     self.moons.text = [NSString stringWithFormat:@"%i", self.spaceObject.numberOfMoons];
     self.day.text = [NSString stringWithFormat:@"%f", self.spaceObject.dayLength];
     self.year.text = [NSString stringWithFormat:@"%f", self.spaceObject.yearLength];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UIButton class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[UIScrollViewViewController class]])
+             {
+                 UIScrollViewViewController *nextView = segue.destinationViewController;
+                 nextView.spaceObject = self.spaceObject;
+             }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
