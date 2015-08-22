@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nTz-Jv-STB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nTz-Jv-STB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Planets-->
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="YOJ-xT-0F8" detailTextLabel="Hhz-yC-IQV" style="IBUITableViewCellStyleSubtitle" id="Sg0-Yh-1t4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="YOJ-xT-0F8" detailTextLabel="Hhz-yC-IQV" style="IBUITableViewCellStyleSubtitle" id="Sg0-Yh-1t4">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sg0-Yh-1t4" id="A59-nH-B5j">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -42,8 +42,17 @@
                             <outlet property="delegate" destination="t6a-Mv-wEm" id="xam-Sp-5i7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Planets" id="UQa-rU-TZE" colorLabel="IBBuiltInLabel-Gray"/>
+                    <navigationItem key="navigationItem" title="Planets" id="UQa-rU-TZE" colorLabel="IBBuiltInLabel-Gray">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="arS-QD-iZp">
+                            <connections>
+                                <segue destination="nU3-Nz-6yz" kind="presentation" id="JAk-1N-8GY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="rhB-jO-5BH" kind="show" identifier="push to datatable" id="yRl-EK-vwb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sm7-eE-Tae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,7 +194,140 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztV-MJ-8w5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1555.5" y="313.5"/>
+            <point key="canvasLocation" x="1610.5" y="-614.5"/>
+        </scene>
+        <!--Info Table View Controller-->
+        <scene sceneID="F7F-RK-DWr">
+            <objects>
+                <viewController id="rhB-jO-5BH" customClass="InfoTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tzG-v5-yhJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="zQz-t4-z08"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pg2-fP-Szv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TpB-gN-aNi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="5ak-CV-quh" detailTextLabel="3fO-Aa-GpV" style="IBUITableViewCellStyleValue1" id="T2y-Nx-poP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T2y-Nx-poP" id="JKb-E2-hjb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ak-CV-quh">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3fO-Aa-GpV">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="TpB-gN-aNi" id="cNA-Oy-852"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yJ-TA-xSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570.5" y="313.5"/>
+        </scene>
+        <!--Add Planet View Controller-->
+        <scene sceneID="eYq-ve-1tG">
+            <objects>
+                <viewController id="nU3-Nz-6yz" customClass="AddPlanetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LSb-uS-Tt2"/>
+                        <viewControllerLayoutGuide type="bottom" id="OBD-wY-ixs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L7d-gE-Jbl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Orion.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Es3-zf-2kJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Planet Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beg-yX-22r">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Planet Nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Bd-HP-YLu">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interesting Fact" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mnm-h2-MBd">
+                                <rect key="frame" x="16" y="96" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-ey-a5k">
+                                <rect key="frame" x="16" y="134" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diameter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kI3-Ao-cnm">
+                                <rect key="frame" x="16" y="172" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Moons" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dje-J6-Bvm">
+                                <rect key="frame" x="16" y="210" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-Z5-pq4">
+                                <rect key="frame" x="55" y="248" width="102" height="56"/>
+                                <state key="normal" title="Cancel" backgroundImage="images-2.jpeg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="nU3-Nz-6yz" eventType="touchUpInside" id="2PF-DO-oGQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNH-6H-Myc">
+                                <rect key="frame" x="217" y="248" width="102" height="56"/>
+                                <state key="normal" title="Add Planet" backgroundImage="1469375.jpg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="nU3-Nz-6yz" eventType="touchUpInside" id="1OU-q0-8dR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="diameter" destination="kI3-Ao-cnm" id="nws-i1-vw9"/>
+                        <outlet property="interestingFact" destination="Mnm-h2-MBd" id="4Uy-Gr-cwu"/>
+                        <outlet property="numberOfMoons" destination="dje-J6-Bvm" id="2HO-a0-hPK"/>
+                        <outlet property="planetName" destination="beg-yX-22r" id="g4M-5E-gy2"/>
+                        <outlet property="planetNickname" destination="5Bd-HP-YLu" id="5Ck-Sy-pWf"/>
+                        <outlet property="temperature" destination="Fbb-ey-a5k" id="EM3-6I-Tka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3F-X1-BIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542.5" y="1154.5"/>
         </scene>
         <!--UIScrollView-->
         <scene sceneID="YG9-hj-hXH">
@@ -203,7 +345,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="605"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -212,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bn-Ea-eqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2092.5" y="313.5"/>
+            <point key="canvasLocation" x="2101.5" y="-497.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cjk-Ka-UUp">
@@ -234,6 +376,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1469375.jpg" width="640" height="360"/>
+        <image name="Orion.jpg" width="400" height="600"/>
+        <image name="images-2.jpeg" width="284" height="177"/>
         <image name="stars.png" width="395" height="293"/>
     </resources>
 </document>

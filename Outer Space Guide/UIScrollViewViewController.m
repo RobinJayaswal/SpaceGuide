@@ -22,7 +22,7 @@
     [self.planetScrollView addSubview:self.imageView];
     self.planetScrollView.delegate = self;
     self.planetScrollView.maximumZoomScale = 1.5;
-    self.planetScrollView.minimumZoomScale = .6;
+    self.planetScrollView.minimumZoomScale = .25;
 }
 
 - (void)didReceiveMemoryWarning {

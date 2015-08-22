@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddPlanetViewController.h"
 
-@interface OuterSpaceTableViewController : UITableViewController
+#define ADDED_SPACE_OBJECTS_KEY = @"Added Space Objects Array"
+
+@interface OuterSpaceTableViewController : UITableViewController <AddPlanetViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *planets;
+@property (strong, nonatomic) NSMutableArray *addedPlanets;
 
 @end

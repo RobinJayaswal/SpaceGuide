@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CA5DCEFFA2A0821796F52B13ACF94CA318B9DCC8</key>
-		<string>bitbucket.org:robinjayaswal/space-app.git</string>
+		<string>https://github.com/RobinJayaswal/SpaceGuide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Outer Space Guide.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>bitbucket.org:robinjayaswal/space-app.git</string>
+	<string>https://github.com/RobinJayaswal/SpaceGuide.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
